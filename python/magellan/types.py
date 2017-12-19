@@ -17,7 +17,10 @@
 import json
 import sys
 
-from itertools import izip, repeat
+from itertools import repeat
+import itertools
+zip = getattr(itertools, 'izip', zip)
+
 
 from pyspark import SparkContext
 from pyspark.sql.types import DataType, UserDefinedType, Row, StructField, StructType, \
